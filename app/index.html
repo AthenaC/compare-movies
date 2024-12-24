@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Compare Movies</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <h1>2023's Top Domestic Movies</h1>
+          <h2>Movies</h2>
+          <!-- Start of Form -->
+            <form id="form" aria-labelledby="form">
+              <h3>Add Your Movie</h3>
+              <!-- Movie Title -->
+              <p><label for="movie-title">Movie Title:</label>
+                <input type="text" name="movieTitle" id="movie-title"></p>
+              <!-- Critic Score -->
+              <p><label for="critic-score">Critic Score:</label>
+                <input type="text" name="criticScore" id="critic-score"></p>
+              <!-- Audience Score -->
+              <p><label for="audience-score">Audience Score:</label>
+                <input type="text" name="audienceScore" id="audience-score"></p>
+              <!-- Domestic Gross Sales -->
+              <p><label for="domestic">Domestic Gross Sales:</label>
+                <input type="text" name="domestic" id="domestic"></p>
+              <!-- Genre -->
+              <p><label for="genre">Genre:</label>
+              <select name="genre" id="genre">
+                <option value="">Select a genre</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="concert">Concert</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+              </select></p>
+              <!-- Submit Button -->
+              <button type="submit" id="add-button" name="addButton">Add a Movie</button>
+            </form>
+            <!-- End of Form -->
+
+            <!-- Display Movies -->
+            <section id="movie-container" aria-labelledby="movieContainer"></section>
+            <button type="submit" id="reset-button" name="resetButton">Go Back To Default Movies</button>
+
+            <!-- Display Domestic Box Office -->
+            <section id="domestic-chart" aria-labelledby="domesticChart"></section>
+
+            <!-- Display Genres and Total Gross -->
+            <section id="genres-chart" aria-labelledby="genresChart"></section>
+
+            <!-- Display Critic vs Audience Score -->
+            <section id="vs-chart" aria-labelledby="vsChart"></section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

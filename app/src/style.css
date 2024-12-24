@@ -1,0 +1,7 @@
+form#form {
+    width: 19rem;
+    padding: 1rem;
+    border: 0.3rem solid black;
+    border-radius: 10px;
+    /* text-align: center;  */
+}
