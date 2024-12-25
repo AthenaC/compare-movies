@@ -1,4 +1,5 @@
 import movieData from './movie-data.json'
+import { showMovie } from './dom-helpers.js';
 
 const startingMovies = movieData;
 
@@ -36,6 +37,12 @@ export const addMovie = (newMovie) => {
     return newMovie;
 };
 
-export const resetMovies = () => {
-
+export const resetMovies = (e) => {
+    const originalText = e.target.textContent;
+    e.target.textContent = "Resetting...";
+    setTimeout(() => {
+        e.target.textContent = originalText;
+        movieSection.innerHTML = '';
+        showMovie(getMovies());
+    }, 1000);
 };

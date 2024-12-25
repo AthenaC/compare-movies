@@ -16,12 +16,13 @@ const handleFormSubmit = (e) => {
     addMovie(newMovie);
     addMovieToList(newMovie);
     form.reset();
-}
+};
 
 const main = () => {
     initMoviesIfEmpty();
     showMovie(getMovies());
     document.querySelector('form#form').addEventListener('submit', handleFormSubmit);
-}
+    document.querySelector('section#movie-section').addEventListener('click', resetMovies);
+};
 
 main();
